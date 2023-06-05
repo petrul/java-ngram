@@ -1,0 +1,46 @@
+plugins {
+    // id 'application'
+    id 'groovy'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation group: 'org.apache.lucene', name: 'lucene-core', version: '8.9.0'
+    implementation group: 'org.apache.lucene', name: 'lucene-analyzers-common', version: '8.9.0'
+    implementation group: 'org.apache.lucene', name: 'lucene-queryparser', version: '8.9.0'
+    implementation group: 'org.apache.lucene', name: 'lucene-queries', version: '8.9.0'
+    implementation group: 'org.apache.lucene', name: 'lucene-demo', version: '8.9.0'
+    implementation group: 'org.apache.lucene', name: 'lucene-test-framework', version: '8.9.0'
+    implementation group: 'org.apache.lucene', name: 'lucene-memory', version: '8.9.0'
+    implementation group: 'org.apache.lucene', name: 'lucene-analyzers', version: '3.6.2'
+    implementation group: 'org.apache.lucene', name: 'lucene-misc', version: '8.9.0'
+    implementation group: 'org.codehaus.groovy', name: 'groovy-all', version: '3.0.8'
+    implementation 'com.google.guava:guava:30.0-jre'
+
+    implementation 'org.apache.commons:commons-lang3:3.6'
+    implementation group: 'org.apache.commons', name: 'commons-text', version: '1.1'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.5'
+
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.20'
+
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.12.3'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.3'
+    
+    testImplementation  'org.junit.jupiter:junit-jupiter-api:5.7.1'
+    testRuntimeOnly     'org.junit.jupiter:junit-jupiter-engine'
+    
+}
+
+// application {
+//     // Define the main class for the application.
+//     mainClass = 'ngramjava.App'
+// }
+
+tasks.named('test') {
+    // Use junit platform for unit tests.
+    useJUnitPlatform()
+}

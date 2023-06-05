@@ -1,0 +1,8 @@
+NP -> (DET) N (PP)
+S -> NP VP
+VP -> V NP (PP)
+PP -> P NP
+N -> boy, girl, dog, cat, ice cream, candy, hotdogs
+V -> eats, likes, bites
+P -> with, in, near
+DET -> a, the, one
